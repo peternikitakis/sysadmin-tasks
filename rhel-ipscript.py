@@ -7,7 +7,6 @@ def ip_address_validation(ip):  # defining a function (ip_address_validation) an
     try:                      
         ip_obj = ipaddress.ip_address(ip) 
         print(f"The IP address {ip_obj} is valid.")
-        return ip_obj
 
     except ValueError: # handling any errors
         print("Please input a valid IP Address")  
@@ -17,7 +16,6 @@ ip_address_validation(userIP) # calling ip validation function and passing throu
 
 validatedIP = ip_address_validation(userIP)
 print(f"Validating IP Address: {validatedIP}")
-
 interfaceID = input("Enter in interface ID: ")
 
 def ip_change(newip):    # defining a function that will pass through a new ip address as the argument
