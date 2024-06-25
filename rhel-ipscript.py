@@ -27,17 +27,3 @@ def ip_change(newip):    # defining a function that will pass through a new ip a
         print("Please input a valid IP Address")
 
 ip_change(validatedIP)
-
-# ask user for their new IP address
-#   currentIP =  "x"
-#newIP = int(input("Please enter your new IP Address:     "))
-#
-# if else statement to see if IP given is valid
-#if newIP >= 0.0.0.0 <= 256:
-#    currentIP = newIP
-#   print(f"You have successfully changed your IP address to {newIP}")
-#else:
-#    print("Please enter a valid IP address") 
-
-
-#add gateway at end and must be /24
