@@ -2,20 +2,23 @@ import ipaddress  # ipaddress module which is used to validate ipv4, ipv6 input
 import subprocess # subprocess module is used to interact with other programs or applications through a python script.  
 
 userIP = input("Enter in new IPv4 Address: ")
-interfaceID = input("Enter in interface ID: ")
 
 def ip_address_validation(ip):  # defining a function (ip_address_validation) and passing through an argument "ip". 
-    try:                        # try lets us test a block of code for errors a
+    try:                      
         ip_obj = ipaddress.ip_address(ip) 
         print(f"The IP address {ip_obj} is valid.")
+        return ip_obj
 
     except ValueError: # handling any errors
         print("Please input a valid IP Address")  
-        exit
+        exit()
 
 ip_address_validation(userIP) # calling ip validation function and passing through ipv4 
 
-validatedIP = ip_address_validation(userIP)  
+validatedIP = ip_address_validation(userIP)
+print(f"Validating IP Address: {validatedIP}")
+
+interfaceID = input("Enter in interface ID: ")
 
 def ip_change(newip):    # defining a function that will pass through a new ip address as the argument
     try: # attempting to test a block of code  
