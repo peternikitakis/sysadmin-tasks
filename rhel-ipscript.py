@@ -7,14 +7,14 @@ def ip_address_validation(ip):  # defining a function (ip_address_validation) an
     try:                      
         ip_obj = ipaddress.ip_address(ip) 
         print(f"The IP address {ip_obj} is valid.")
+        return ip_obj
 
     except ValueError: # handling any errors
         print("Please input a valid IP Address")  
         exit()
 
-ip_address_validation(userIP) # calling ip validation function and passing through ipv4 
+validatedIP = ip_address_validation(userIP) # calling ip validation function and passing through ipv4 
 
-validatedIP = ip_address_validation(userIP)
 print(f"Validating IP Address: {validatedIP}")
 interfaceID = input("Enter in interface ID: ")
 
